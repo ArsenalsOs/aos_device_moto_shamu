@@ -216,6 +216,10 @@ PRODUCT_PACKAGES += \
     libxml2 \
     qmi_motext_hook
 
+PRODUCT_PACKAGES += \
+    android.hardware.radio@1.0 \
+    android.hardware.radio.deprecated@1.0
+
 # SEC config
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sec_config:$(TARGET_COPY_OUT_VENDOR)/etc/sec_config
