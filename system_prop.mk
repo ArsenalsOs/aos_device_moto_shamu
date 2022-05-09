@@ -60,7 +60,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.hwc.mdpcomp.enable=true \
     ro.opengles.version=196610 \
     ro.sf.lcd_density=560 \
-    vidc.debug.level=1
+    vidc.debug.level=1 \
+    debug.renderengine.backend=threaded
 
 # DRM service
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -105,7 +106,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.oem_socket=false \
     persist.radio.sib16_support=1 \
     persist.qcril_uim_vcc_feature=1 \
-    rild.libpath=/system/vendor/lib/libril-qc-qmi-1.so
+    vendor.rild.libpath=/vendor/lib/libril-qc-qmi-1.so
 
 # Surfaceflinger
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
