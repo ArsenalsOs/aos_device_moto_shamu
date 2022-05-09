@@ -42,6 +42,9 @@ LOCAL_CFLAGS += \
     -DHAL3 \
     -DVANILLA_HAL
 
+LOCAL_CLANG_CFLAGS += \
+	-Wno-unreachable-code-loop-increment
+
 LOCAL_C_INCLUDES := \
     $(LOCAL_PATH)/stack/common \
     frameworks/native/include/media/hardware \
