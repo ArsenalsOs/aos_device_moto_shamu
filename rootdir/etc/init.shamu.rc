@@ -23,6 +23,7 @@ on early-init
     chown system system /sys/kernel/debug/kgsl/proc
 
 on init
+    setprop ro.kernel.ebpf.supported false
     # vold needs keymaster that needs qseecomd
     start qseecomd
 
