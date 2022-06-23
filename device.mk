@@ -219,7 +219,8 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     android.hardware.radio@1.0 \
-    android.hardware.radio.deprecated@1.0
+    android.hardware.radio.deprecated@1.0 \
+    android.hardware.radio.config@1.0-service
 
 # SEC config
 PRODUCT_COPY_FILES += \
