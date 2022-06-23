@@ -45,3 +45,7 @@ allow rild system_file:file execute_no_trans;
 allow rild proc_bootinfo:file r_file_perms;
 
 get_prop(rild, wifi_prop);
+
+get_prop(rild, default_prop)
+get_prop(rild, wifi_hal_prop)
+allow rild radio_core_data_file:dir search;

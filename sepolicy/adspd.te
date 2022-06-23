@@ -24,3 +24,5 @@ allow adspd sysfs_adsp:file rw_file_perms;
 
 allow adspd sysfs_input:dir search;
 allow adspd sysfs_input:file r_file_perms;
+
+get_prop(adspd, default_prop)

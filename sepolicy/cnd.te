@@ -14,3 +14,7 @@ allow cnd netmgrd:file r_file_perms;
 allow cnd proc_meminfo:file r_file_perms;
 
 get_prop(cnd, wifi_prop);
+
+get_prop(cnd, default_prop)
+get_prop(cnd, system_prop)
+get_prop(cnd, wifi_hal_prop)

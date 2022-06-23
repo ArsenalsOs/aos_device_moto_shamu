@@ -1,2 +1,4 @@
 allow hal_graphics_allocator sysfs_graphics:dir r_dir_perms;
 allow hal_graphics_allocator sysfs_graphics:file r_file_perms;
+
+get_prop(hal_graphics_allocator_default, default_prop)

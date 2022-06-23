@@ -33,3 +33,6 @@ allow camera system_data_root_file:sock_file { create unlink };
 #for v4L node "name" access
 allow camera sysfs_graphics:file rw_file_perms;
 allow camera ion_device:chr_file rw_file_perms;
+
+get_prop(camera, default_prop)
+get_prop(cameraserver, vendor_default_prop)

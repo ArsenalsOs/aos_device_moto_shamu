@@ -1,4 +1,4 @@
-type ims, domain, device_domain_deprecated;
+type ims, domain, vendor_executes_system_violators;
 type ims_exec, exec_type, file_type;
 
 # Started by init
@@ -57,3 +57,5 @@ allow ims wpa_socket:dir rw_dir_perms;
 allow ims wifi_data_file:dir r_dir_perms;
 
 unix_socket_send(ims, wpa, hal_wifi_supplicant_server)
+
+get_prop(ims, default_prop)

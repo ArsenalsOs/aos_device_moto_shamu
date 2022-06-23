@@ -1,1 +1,3 @@
 allow mediacodec system_server:fifo_file write;
+
+get_prop(mediacodec, default_prop)

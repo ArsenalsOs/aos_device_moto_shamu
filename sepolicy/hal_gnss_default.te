@@ -23,3 +23,6 @@ allow hal_gnss_default sysfs_esoc:file r_file_perms;
 userdebug_or_eng(`
   allow hal_gnss diag_device:chr_file { read write open ioctl};
 ')
+
+get_prop(hal_gnss_default, default_prop)
+get_prop(hal_gnss_default, system_prop)

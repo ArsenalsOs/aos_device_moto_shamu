@@ -42,3 +42,6 @@ allow sensors sysfs_socinfo:dir r_dir_perms;
 allow sensors sysfs_socinfo:file { read open getattr };
 
 allow sensors system_file:dir r_dir_perms;
+
+allow sensors self:capability dac_override;
+get_prop(sensors, default_prop)

@@ -54,3 +54,6 @@ r_dir_file(netmgrd sysfs_esoc);
 hwbinder_use(netmgrd)
 binder_call(netmgrd, netd)
 binder_call(netmgrd servicemanager)
+
+get_prop(netmgrd,default_prop)
+get_prop(netmgrd,boot_status_prop)
