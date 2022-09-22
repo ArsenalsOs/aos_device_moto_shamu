@@ -97,6 +97,8 @@ on post-fs-data
     mkdir /data/tombstones/modem 0771 system system
     mkdir /data/tombstones/lpass 0771 system system
     mkdir /data/tombstones/dsps 0771 system system
+    mkdir /dev/misce
+    chmod 0775 /dev/misce
 
     # SENSORS
     # Create directory used by sensor subsystem(dsps)
@@ -117,7 +119,7 @@ on post-fs-data
     mkdir /data/ss-ram-dumps/bp-dumps 0750 radio log
 
     # rild files
-    mkdir /data/misc/audio_cutback 0770 radio audio
+    mkdir /dev/misce/audio_cutback 0770 radio audio
 
     # msm specific files that need to be created on /data
     # Create the directories used by the Wireless subsystem
@@ -183,7 +185,7 @@ on post-fs-data
     mkdir /data/adspd/1 0770 media media
 
     # Create PERFD deamon related dirs
-    mkdir /data/misc/perfd 2755 root system
+    mkdir /dev/misce/perfd 2755 root system
     mkdir /data/system/perfd 2770 root system
     rm /data/system/perfd/default_values
 
