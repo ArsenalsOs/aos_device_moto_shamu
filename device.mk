@@ -63,13 +63,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/bluetooth/BCM4356A2_001.003.015.0077.0214_ORC.hcd:$(TARGET_COPY_OUT_VENDOR)/firmware/bcm4354A2.hcd
 
-# Camera
 PRODUCT_PACKAGES += \
-    Snap
-
-PRODUCT_PACKAGES += \
-    camera.msm8084 \
-    libmm-qcamera
+    camera.msm8084
 
 # Characteristics
 PRODUCT_CHARACTERISTICS := nosdcard
@@ -86,7 +81,6 @@ PRODUCT_PACKAGES += \
     gralloc.msm8084 \
     hwcomposer.msm8084 \
     memtrack.msm8084 \
-    libgenlock \
     libqdutils \
     libqdMetaData
 
@@ -149,7 +143,6 @@ PRODUCT_PACKAGES += \
     libOmxCore \
     libmm-omxcore \
     libOmxVdec \
-    libOmxVdecHevc \
     libOmxVenc
 
 # Overlays
@@ -214,8 +207,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libion \
     librmnetctl \
-    libxml2 \
-    qmi_motext_hook
+    libxml2
 
 PRODUCT_PACKAGES += \
     android.hardware.radio@1.0 \
@@ -248,10 +240,6 @@ PRODUCT_PACKAGES += \
     timekeep \
     TimeKeep
 
-# Touch
-PRODUCT_PACKAGES += \
-    atmel.fw.apq8084
-
 # Touch firmware updater
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/bin/init.mmi.touch.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.mmi.touch.sh
@@ -274,7 +262,6 @@ AUDIO_FEATURE_ENABLED_MULTI_VOICE_SESSIONS := true
 PRODUCT_PACKAGES += \
     libwpa_client \
     hostapd \
-    wifilogd \
     wpa_supplicant \
     wpa_supplicant.conf
 
