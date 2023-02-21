@@ -1,1 +1,2 @@
 allow kernel self:capability net_admin;
+dontaudit kernel self:system module_request;

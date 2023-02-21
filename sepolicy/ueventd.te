@@ -4,5 +4,3 @@ allow ueventd self:capability sys_nice;
 allow ueventd sysfs_devices_system_cpu:file rw_file_perms;
 allow ueventd sysfs_mmi_touch:file w_file_perms;
 allow ueventd sysfs_mmi_touch:dir search;
-
-allow ueventd proc:file { getattr open read };

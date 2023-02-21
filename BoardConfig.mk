@@ -126,6 +126,7 @@ BOARD_USES_CUTBACK_IN_RILD := true
 
 # Selinux
 BOARD_VENDOR_SEPOLICY_DIRS += device/moto/shamu/sepolicy
+SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += device/moto/shamu/sepolicy/private
 SELINUX_IGNORE_NEVERALLOWS := true
 
 # Shims
@@ -148,5 +149,6 @@ WPA_SUPPLICANT_VERSION      := VER_0_8_X
 BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+BUILD_BROKEN_TREBLE_SYSPROP_NEVERALLOW := true
 
 -include vendor/motorola/shamu/BoardConfigVendor.mk

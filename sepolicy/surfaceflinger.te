@@ -1,0 +1,2 @@
+get_prop(surfaceflinger, vendor_default_prop) 
+dontaudit surfaceflinger kernel:system module_request;

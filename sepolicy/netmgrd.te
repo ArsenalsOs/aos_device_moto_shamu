@@ -57,3 +57,8 @@ binder_call(netmgrd servicemanager)
 
 get_prop(netmgrd,default_prop)
 get_prop(netmgrd,boot_status_prop)
+
+allow netmgrd bpfloader:bpf prog_run;
+allow netmgrd fs_bpf:dir search;
+allow netmgrd fs_bpf:file read;
+dontaudit netmgrd kernel:system module_request;
