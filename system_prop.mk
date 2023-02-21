@@ -168,7 +168,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.dbg.volte_avail_ovr=1 \
     persist.dbg.vt_avail_ovr=1 \
     persist.radio.calls.on.ims=1 \
-    ro.ims.dynamic_bind=false
+    ro.ims.dynamic_bind=false \
+    ro.telephony.block_binder_thread_on_incoming_calls=false
 
 # Wi-Fi calling
 PRODUCT_PROPERTY_OVERRIDES += \
