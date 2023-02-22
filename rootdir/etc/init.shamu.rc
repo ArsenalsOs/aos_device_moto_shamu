@@ -397,6 +397,11 @@ on property:sys.boot_completed=1
 
     swapon_all /vendor/etc/fstab.shamu
 
+    stop cameraserver
+    start qcamerasvr
+
+on property:init.svc.qcamerasvr=running
+    start cameraserver
 
 on property:ro.data.large_tcp_window_size=true
     # Adjust socket buffer to enlarge TCP receive window for high bandwidth (e.g. DO-RevB)
@@ -440,9 +445,10 @@ service thermal-engine /system/vendor/bin/thermal-engine
     writepid /dev/cpuset/system-background/tasks
 
 service qcamerasvr /system/bin/mm-qcamera-daemon
-    class early_hal
+    class late_start
     user camera
     group camera system inet input graphics
+    disabled
     writepid /dev/cpuset/camera-daemon/tasks
 
 service bdAddrLoader /system/vendor/bin/bdAddrLoader_shamu -p ro.boot.btmacaddr -s -x
