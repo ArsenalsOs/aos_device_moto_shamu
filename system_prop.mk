@@ -39,7 +39,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     bluetooth.profile.pan.nap.enabled=true \
     bluetooth.profile.pan.panu.enabled=true \
     bluetooth.profile.pbap.server.enabled=true \
-    bluetooth.profile.sap.server.enabled=true
+    bluetooth.profile.sap.server.enabled=true \
+    bluetooth.le.disable_apcf_extended_features=1
 
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
