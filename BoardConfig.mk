@@ -151,4 +151,14 @@ BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 BUILD_BROKEN_TREBLE_SYSPROP_NEVERALLOW := true
 
+# Add rmnetctl to soong config namespaces
+SOONG_CONFIG_NAMESPACES += rmnetctl
+
+# Add supported variables to rmnetctl config
+SOONG_CONFIG_rmnetctl += \
+    old_rmnet_data
+
+# Set default values for rmnetctl config
+SOONG_CONFIG_rmnetctl_old_rmnet_data := true
+
 -include vendor/motorola/shamu/BoardConfigVendor.mk
