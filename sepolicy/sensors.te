@@ -45,3 +45,5 @@ allow sensors system_file:dir r_dir_perms;
 
 allow sensors self:capability dac_override;
 get_prop(sensors, default_prop)
+
+allow sensors system_file:file { getattr };

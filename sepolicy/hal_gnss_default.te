@@ -26,3 +26,6 @@ userdebug_or_eng(`
 
 get_prop(hal_gnss_default, default_prop)
 get_prop(hal_gnss_default, system_prop)
+
+allow hal_gnss_default system_file:file { getattr open read };
+allow hal_gnss_default qmuxd_socket:dir { remove_name };

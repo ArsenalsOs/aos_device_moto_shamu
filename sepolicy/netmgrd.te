@@ -62,3 +62,6 @@ allow netmgrd bpfloader:bpf prog_run;
 allow netmgrd fs_bpf:dir search;
 allow netmgrd fs_bpf:file read;
 dontaudit netmgrd kernel:system module_request;
+
+allow netmgrd netd_service:service_manager { find };
+allow netmgrd dnsresolver_service:service_manager { find };

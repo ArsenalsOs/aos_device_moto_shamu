@@ -25,3 +25,17 @@ allow audioserver sysfs_esoc:file r_file_perms;
 allow audioserver hal_power_hwservice:hwservice_manager find;
 
 get_prop(audioserver, vendor_default_prop)
+
+allow audioserver vendor_file:file { execute getattr open read };
+
+allow audioserver audio_device:chr_file { ioctl open };
+
+allow audioserver audio_device:dir { search };
+
+allow audioserver hal_power_service:service_manager { find };
+
+allow audioserver proc_asound:dir { search };
+
+allow audioserver proc_asound:file { getattr read open };
+
+allow audioserver system_data_file:sock_file { write };

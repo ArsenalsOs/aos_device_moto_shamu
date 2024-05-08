@@ -1,0 +1,4 @@
+allow bluetooth vendor_file:file { execute getattr open read };
+allow bluetooth sysfs_bluetooth_writable:dir { search open read write };
+allow bluetooth hci_attach_dev:chr_file { ioctl open read write };
+allow bluetooth sysfs_bluetooth_writable:file { open read write };

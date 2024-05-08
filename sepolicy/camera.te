@@ -36,3 +36,10 @@ allow camera ion_device:chr_file rw_file_perms;
 
 get_prop(camera, default_prop)
 get_prop(cameraserver, vendor_default_prop)
+
+allow cameraserver vendor_file:file { execute getattr open read };
+allow camera sysfs_graphics:dir { search };
+allow cameraserver camera_device:chr_file { ioctl open read write };
+allow cameraserver video_device:chr_file { ioctl open read write };
+allow cameraserver camera_socket:sock_file { write };
+allow cameraserver camera:unix_dgram_socket { sendto };
