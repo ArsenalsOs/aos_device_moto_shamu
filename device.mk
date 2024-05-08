@@ -31,10 +31,12 @@ PRODUCT_COPY_FILES += \
 
 # Audio
 PRODUCT_PACKAGES += \
+    audio.primary.default \
     audio.primary.msm8084 \
     audio.a2dp.default \
     audio.usb.default \
     audio.r_submix.default \
+    libaudioroute \
     libaudio-resampler
 
 # Audio configs
@@ -139,6 +141,7 @@ PRODUCT_PACKAGES += \
 # OMX
 PRODUCT_PACKAGES += \
     libc2dcolorconvert \
+    libminijail:32 \
     libstagefrighthw \
     libOmxCore \
     libmm-omxcore \
@@ -275,6 +278,4 @@ PRODUCT_COPY_FILES += \
 
 # WiFi firmware
 $(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4356/device-bcm.mk)
-
-
 

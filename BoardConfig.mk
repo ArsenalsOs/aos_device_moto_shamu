@@ -15,6 +15,9 @@
 # limitations under the License.
 #
 
+# Apex
+OVERRIDE_TARGET_FLATTEN_APEX := true
+
 # Architecture
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
@@ -160,5 +163,13 @@ SOONG_CONFIG_rmnetctl += \
 
 # Set default values for rmnetctl config
 SOONG_CONFIG_rmnetctl_old_rmnet_data := true
+
+BUILD_BROKEN_MISSING_REQUIRED_MODULES := true
+
+#BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
+
+# Init
+TARGET_INIT_VENDOR_LIB := //device/moto/shamu:init_moto_shamu
+TARGET_RECOVERY_DEVICE_MODULES ?= init_moto_shamu
 
 -include vendor/motorola/shamu/BoardConfigVendor.mk

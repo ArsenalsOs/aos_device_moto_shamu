@@ -3,7 +3,7 @@
 #
 
 # System
-PRODUCT_PROPERTY_OVERRIDES += \
+#PRODUCT_PROPERTY_OVERRIDES += \
     ro.vndk.version=current
 
 # Audio
@@ -74,12 +74,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \
+    ro.hardware.egl=adreno \
     debug.sf.enable_gl_backpressure=1 \
     persist.hwc.mdpcomp.enable=true \
     ro.opengles.version=196610 \
     ro.sf.lcd_density=560 \
     vidc.debug.level=1 \
-    debug.renderengine.backend=threaded
+    debug.renderengine.backend=gles
 
 # DRM service
 PRODUCT_PROPERTY_OVERRIDES += \
