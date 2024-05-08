@@ -157,7 +157,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Vendor security patch level
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.lineage.build.vendor_security_patch=2017-10-01
+    ro.arsenals.build.vendor_security_patch=2017-10-01
     
 # IMS features
 PRODUCT_PROPERTY_OVERRIDES += \
